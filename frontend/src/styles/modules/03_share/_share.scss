@@ -1,0 +1,53 @@
+/* modules/03_share/_share.scss
+-------------------------------------------------- */
+@use "../../setting/import" as *;
+
+.m-share {
+  & {
+    &__head {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: color(wt);
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+    &__back {
+      svg {
+        transform: scaleX(-1);
+      }
+    }
+    &__ttl {
+      font-weight: $regular;
+    }
+    &__main {
+      background-color: color(wt);
+    }
+  }
+
+  @include pc {
+    &__head {
+      height: vw(80px, $pc);
+      padding: 0 vw(25px, $pc);
+      box-shadow: 0 vw(5px, $pc) vw(5px, $pc) 0 rgba(0, 0, 0, 0.2);
+      gap: 0 vw(10px, $pc);
+    }
+    &__back {
+      width: vw(50px, $pc);
+    }
+    &__ttl {
+      font-size: vw(25px, $pc);
+      span {
+        font-size: vw(15px, $pc);
+      }
+    }
+    &__main {
+      margin: vw(160px, $pc) 0 vw(50px, $pc);
+      border-radius: vw(20px, $pc);
+      box-shadow: 0 0 vw(8px, $pc) 0 rgba(0, 0, 0, 0.2);
+      padding: vw(30px, $pc);
+    }
+  }
+}
